@@ -60,8 +60,8 @@ from keras.api.utils import load_img , img_to_array
 
 @st.dialog("Classification Result")
 def open_popup(class_pred, y_pred):
-    st.progress(float(y_pred[0]) , text='Counterfeit')
-    st.progress(float(y_pred[1]) , text='Genuine')
+    st.progress(float(y_pred[0]) , text=f'Counterfeit: { int( y_pred[0] * 100 ) } %')
+    st.progress(float(y_pred[1]) , text=f'Genuine:  {int( y_pred[1] * 100) } %')
     
     st.text(f"predicted class: {class_pred}")
     
