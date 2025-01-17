@@ -94,7 +94,7 @@ for col, img_path in zip(counterfeit_row, couterfeit_notes):
 
     
 for col, img_path in zip(genuine_row , genuine_notes): 
-    col.image(img_path , width=150)
+    col.image(img_path)
     if col.button('test run', key=img_path):
         on_click(img_path)
     
